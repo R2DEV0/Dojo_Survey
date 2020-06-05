@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/style.css"/>
+    <title>Index Form Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/method" method="post" class="form">
+            <h3>Put some info in here!</h3>
+            <label for="name">Your Name:</label>
+            <input type="text" name="name">
+            <br>
+            <label for="location">Location</label>
+            <select name="location">
+                <option value="seattle">Seattle</option>
+                <option value="orlando">Orlando</option>
+                <option value="las vegas">Las Vegas</option>
+                <option value="alaska">Alaska</option>
+            </select>
+            <br>
+            <label for="language">Favorite Language</label>
+            <select name="language">
+                <option value="c#"> C# </option>
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+            </select>
+            <br>
+            <label for="comment">Comment (optional): </label>
+            <input type="text" name="comment">
+            <br>
+            <button type="submit" class="btn btn-dark btn-md">Submit</button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

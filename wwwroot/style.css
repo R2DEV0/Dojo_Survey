@@ -1,0 +1,37 @@
+.form{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 30px;
+    display: inline-block;
+    text-align: left;
+    margin-top: 5%;
+    background-color: rgba(81, 211, 168, 0.76);
+
+}
+
+button{
+    margin-left: 37%;
+    margin-top: 4%;
+}
+
+a{
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 8px;
+    text-align: center;
+    margin-left: 37%;
+    background-color: aquamarine;
+    color: black;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 8%;
+    text-decoration: underline;
+}
+
+h1{
+    text-decoration: underline;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
