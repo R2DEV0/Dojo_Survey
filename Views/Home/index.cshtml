@@ -1,3 +1,5 @@
+@model Person
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,30 +12,44 @@
 
 <body>
     <div class="container">
-        <form action="/method" method="post" class="form">
+        <form asp-action="FormSubmit" asp-controller="Home" method="POST" class="form">
             <h3>Put some info in here!</h3>
-            <label for="name">Your Name:</label>
-            <input type="text" name="name">
+
+            <label asp-for="Name"></label>
+            <input asp-for="Name">
             <br>
-            <label for="location">Location</label>
-            <select name="location">
+            <span asp-validation-for="Name" class="text-danger"></span>
+            <br>
+
+            <label asp-for="Location"></label>
+            <select asp-for="Location">
                 <option value="seattle">Seattle</option>
                 <option value="orlando">Orlando</option>
                 <option value="las vegas">Las Vegas</option>
                 <option value="alaska">Alaska</option>
             </select>
+            <span asp-validation-for="Location" class="text-danger"></span>
+
             <br>
-            <label for="language">Favorite Language</label>
-            <select name="language">
+
+            <label asp-for="Language"></label>
+            <select asp-for="Language">
                 <option value="c#"> C# </option>
                 <option value="python">Python</option>
                 <option value="javascript">JavaScript</option>
             </select>
+            <span asp-validation-for="Language" class="text-danger"></span>
+
             <br>
-            <label for="comment">Comment (optional): </label>
-            <input type="text" name="comment">
+
+            <label asp-for="Comment"></label>
+            <input asp-for="Comment">
+            <span asp-validation-for="Comment" class="text-danger"></span>
+
             <br>
+
             <button type="submit" class="btn btn-dark btn-md">Submit</button>
+
         </form>
 
     </div>

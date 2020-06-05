@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using Dojo_survey.Models;
 
 namespace Dojo_survey
 {
@@ -12,23 +13,24 @@ namespace Dojo_survey
             return View();
         }
 
-
         [HttpGet("results")]
         public ViewResult Results()
         {
             return View();
         }
 
-
         [HttpPost("method")]
-        public ViewResult FormSubmit(string Name, string Location, string Language, string Comment)
+        public ViewResult FormSubmit(Person FromForm)
         {
-            ViewBag.name = Name;
-            ViewBag.location = Location;
-            ViewBag.language = Language;
-            ViewBag.comment = Comment;
-
-            return View("results");
+            if(ModelState.IsValid)
+            {
+                ViewBag.Person = FromForm;
+                return View("results");
+            }
+            else
+            {
+                return View("Index");
+            }
         }
     }
 }
