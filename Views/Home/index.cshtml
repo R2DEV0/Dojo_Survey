@@ -28,8 +28,8 @@
                 <option value="las vegas">Las Vegas</option>
                 <option value="alaska">Alaska</option>
             </select>
+            <br>
             <span asp-validation-for="Location" class="text-danger"></span>
-
             <br>
 
             <label asp-for="Language"></label>
@@ -38,14 +38,14 @@
                 <option value="python">Python</option>
                 <option value="javascript">JavaScript</option>
             </select>
+            <br>
             <span asp-validation-for="Language" class="text-danger"></span>
-
             <br>
 
             <label asp-for="Comment"></label>
             <input asp-for="Comment">
+            <br>
             <span asp-validation-for="Comment" class="text-danger"></span>
-
             <br>
 
             <button type="submit" class="btn btn-dark btn-md">Submit</button>
