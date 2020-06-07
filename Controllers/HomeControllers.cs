@@ -13,24 +13,15 @@ namespace Dojo_survey
             return View();
         }
 
-        [HttpGet("results")]
-        public ViewResult Results()
-        {
-            return View();
-        }
 
         [HttpPost("method")]
         public ViewResult FormSubmit(Person FromForm)
         {
             if(ModelState.IsValid)
             {
-                ViewBag.Person = FromForm;
-                return View("results");
+                return View("results", FromForm);
             }
-            else
-            {
-                return View("Index");
-            }
+            return View("Index");
         }
     }
 }

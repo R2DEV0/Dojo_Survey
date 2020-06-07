@@ -1,3 +1,4 @@
+@model Person
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,13 +15,13 @@
         <h1>Submitted Info:</h1>
 
         <div>
-            Name: @ViewBag.Person.Name
+            Name: @Model.Name
             <br>
-            Dojo Location: @ViewBag.Person.Location
+            Dojo Location: @Model.Location
             <br>
-            Favorite Language: @ViewBag.Person.Language
+            Favorite Language: @Model.Language
             <br>
-            Commment: @ViewBag.Person.Comment
+            Commment: @Model.Comment
         </div>
         
     </div>
